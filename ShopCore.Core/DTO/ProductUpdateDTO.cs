@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace ShopCore.Core.DTO
 {
-    internal class ProductUpdateDTO
+    public class ProductUpdateDTO
     {
+        public string ProductName { get; set; }
+        public string ProductDescription { get; set; }
+        public decimal ProductPrice { get; set; }
+        public int StockQuantity { get; set; }
+        public int CategoryId { get; set; }
+
+ 
     }
 }
