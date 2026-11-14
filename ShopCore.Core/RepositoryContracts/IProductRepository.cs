@@ -19,12 +19,34 @@ namespace ShopCore.Core.RepositoryContracts
         /// </summary>
         /// <param name="ProductId"></param>
         /// <returns></returns>
-        Task<Product> GetProductByIdAsync(Guid ProductId);
+        Task<Product?> GetProductByIdAsync(Guid productId);
         /// <summary>
         /// Get Pri
         /// </summary>
-        /// <param name="Name"></param>
+        /// <param name="name"></param>
         /// <returns></returns>
-        Task<Product> GetProductByNameAsync(string Name);
+        Task<List<Product>> GetProductByNameAsync(string name);
+        
+        /// <summary>
+        /// Add Product To DataBase
+        /// </summary>
+        /// <param name="product"></param>
+        /// <returns></returns>
+        Task<bool> AddProductAsync(Product product);
+
+        /// <summary>
+        /// Update Product Attributes
+        /// </summary>
+        /// <param name="product"></param>
+        /// <returns>Return Updated Product</returns>
+        Task<Product> UpdateProductAsync(Product product);
+
+        /// <summary>
+        /// Delete Product From DataBase By Id
+        /// </summary>
+        /// <param name="productId">Delete Product By This Param</param>
+        /// <returns>If Deleting Is Successful Would Be True </returns>
+        Task<bool> DeleteProductByIdAsync(Guid productId);
+         
     }
 }
